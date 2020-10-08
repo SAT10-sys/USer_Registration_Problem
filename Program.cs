@@ -19,6 +19,17 @@ namespace User_Registration_Problem
                 Console.WriteLine(" Please enter valid first name ");
                 goto RegStart1;
             }
+        RegStart2:
+            Console.WriteLine(" Enter the last name(starting with capital and minimum 3 letters) ");
+            string lastName = Console.ReadLine();
+            bool checkLastName = userRegistrationDetails.validateLastName(lastName);
+            if (checkLastName == true)
+                Console.WriteLine(" LAST NAME: " + lastName);
+            else
+            {
+                Console.WriteLine(" Please enter valid last name ");
+                goto RegStart2;
+            }
         }
     }
 }
