@@ -52,6 +52,21 @@ namespace User_Registration_Problem
                 Console.WriteLine(" Please enter valid Phone Number ");
                 goto RegStart4;
             }
+        RegStart5:
+            Console.WriteLine(" Enter Password ");
+            Console.WriteLine(" Password Rules: ");
+            Console.WriteLine(" Minimum 8 characters ");
+            string password = Console.ReadLine();
+            bool checkPassword = userRegistrationDetails.validatePassword(password);
+            if(checkPassword==true)
+            {
+                Console.WriteLine(" PASSWORD: " + password);
+            }
+            else
+            {
+                Console.WriteLine(" Enter valid password ");
+                goto RegStart5;
+            }
         }
     }
 }
