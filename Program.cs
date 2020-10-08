@@ -55,10 +55,12 @@ namespace User_Registration_Problem
         RegStart5:
             Console.WriteLine(" Enter Password ");
             Console.WriteLine(" Password Rules: ");
-            Console.WriteLine(" Minimum 8 characters ");
+            Console.WriteLine("*Minimum 8 characters ");
+            Console.WriteLine("*Should Have at least 1 UpperCase Letter ");
             string password = Console.ReadLine();
-            bool checkPassword = userRegistrationDetails.validatePassword(password);
-            if(checkPassword==true)
+            bool checkPassword1 = userRegistrationDetails.validatePasswordRule1(password);
+            bool checkPassword2 = userRegistrationDetails.validatePasswordRule2(password);
+            if(checkPassword1==true && checkPassword2==true)
             {
                 Console.WriteLine(" PASSWORD: " + password);
             }
