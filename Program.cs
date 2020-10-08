@@ -30,6 +30,17 @@ namespace User_Registration_Problem
                 Console.WriteLine(" Please enter valid last name ");
                 goto RegStart2;
             }
+        RegStart3:
+            Console.WriteLine(" Enter email id ");
+            string emailId = Console.ReadLine();
+            bool checkemailID = userRegistrationDetails.validateEmailID(emailId);
+            if (checkemailID == true)
+                Console.WriteLine(" EMAIL ID: " + emailId);
+            else
+            {
+                Console.WriteLine(" Please enter valid Email ID ");
+                goto RegStart3;
+            }
         }
     }
 }
