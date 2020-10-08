@@ -41,6 +41,17 @@ namespace User_Registration_Problem
                 Console.WriteLine(" Please enter valid Email ID ");
                 goto RegStart3;
             }
+        RegStart4:
+            Console.WriteLine(" Enter mobile number ");
+            string phoneNo = Console.ReadLine();
+            bool checkPhoneNo = userRegistrationDetails.validatePhoneNo(phoneNo);
+            if (checkPhoneNo == true)
+                Console.WriteLine(" PHONE NUMBER: " + phoneNo);
+            else
+            {
+                Console.WriteLine(" Please enter valid Phone Number ");
+                goto RegStart4;
+            }
         }
     }
 }
