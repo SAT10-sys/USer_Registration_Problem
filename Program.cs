@@ -59,11 +59,10 @@ namespace User_Registration_Problem
             Console.WriteLine("*Minimum 8 characters ");
             Console.WriteLine("*Should Have at least 1 UpperCase Letter ");
             Console.WriteLine("*Should Have at least 1 digit ");
+            Console.WriteLine("*Should Have exactly 1 special character ");
             string password = Console.ReadLine();
-            bool checkPassword1 = userRegistrationDetails.validatePasswordRule1(password);
-            bool checkPassword2 = userRegistrationDetails.validatePasswordRule2(password);
-            bool checkPassword3 = userRegistrationDetails.validatePasswordRule3(password);
-            if(checkPassword1==true && checkPassword2==true && checkPassword3==true)
+            bool checkPassword4 = userRegistrationDetails.validatePasswordRule4(password);
+            if (checkPassword4==true)
             {
                 Console.WriteLine(" PASSWORD: " + password);
             }
